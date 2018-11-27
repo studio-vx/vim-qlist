@@ -74,7 +74,7 @@ function! s:Qlist(command, selection, start_at_cursor, force, ...)
 
     " Open the quickfix window if there is something to show.
     cclose
-    execute min([ 10, len(getqflist()) ]) 'botright cwindow'
+    execute 'botright' min([ 10, len(getqflist()) ]) 'cwindow'
 
     " Add proper feedback to the statusline.
     if has("patch-7.4.2200")
